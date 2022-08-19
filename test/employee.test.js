@@ -5,4 +5,8 @@ test("can instantiate Employee instance", () => {
     except(typeof(e)).toBe("object");
 });
 
-test("Can set name ")
+test("Can set name via constructor arguments", () => {
+    const name = "Robert";
+    const e = new Employee(name);
+    except(e.name).toBe(name);
+    });
