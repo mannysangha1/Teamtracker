@@ -6,3 +6,6 @@ test("Can set GitHub account via constructor", () =>{
     expect(e.github).toBe(testValue);
 });
 
+test("getRole() should return \"Engineer\"", () => {
+    
+})
