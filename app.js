@@ -51,6 +51,17 @@ function managerQuestions(){
 
 function addEmployee(){
     inquirer.prompt({
-        
-    })
+        type: "list",
+        name: "employeeType",
+        message: "What type of employee would you like to add?",
+        choices: ["Engineer", "Intern", "Done adding employees"]
+    }).then(function(result){
+        if(result.employeeType === "Engineer"){
+            engineerQuestions();
+        } else if (result.employeeType === "Intern"){
+            internQuestions();
+        } else if (result.employeeType === "Done adding employees"){
+            generateHTML();
+        }
+    })     
 }
