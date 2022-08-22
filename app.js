@@ -25,6 +25,14 @@ function managerQuestions(){
             name: "name",
             message: "What is your name?"
 
-        }
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "What is your id?"
+        },
+        {
+            
+        },
     ])
 }
