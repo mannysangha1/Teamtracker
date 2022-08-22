@@ -48,3 +48,9 @@ function managerQuestions(){
         addEmployee();
     })
 }
+
+function addEmployee(){
+    inquirer.prompt({
+        
+    })
+}
