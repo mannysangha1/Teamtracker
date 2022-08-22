@@ -12,3 +12,16 @@ const render = require("./lib/htmlRenderer");
 
 const employeeArr = []
 
+function init() {
+    managerQuestions();
+}
+
+init();
+
+function managerQuestions(){
+    inquirer.prompt([
+        {
+            
+        }
+    ])
+}
