@@ -32,6 +32,16 @@ function managerQuestions(){
             message: "What is your id?"
         },
         {
+            type: "input",
+            input: "email",
+            message: "What is your email?"
+        },
+        {
+            type: "input",
+            name: "officeNumber",
+            message: "What is your office number?"
+        },
+        {
             
         },
     ])
