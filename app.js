@@ -7,3 +7,8 @@ const fs = require ("fs");
 
 const HTMLrenderDone_DIR = path.resolve(__dirname, "htmlrenderdone");
 const htmlrenderdonePath = path.join(HTMLrenderDone_DIR, "generatedemployees.html");
+
+const render = require("./lib/htmlRenderer");
+
+const employeeArr = []
+
