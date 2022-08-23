@@ -29,7 +29,7 @@ function managerQuestions(){
         {
             type: "input",
             name: "id",
-            message: "What is your id?"
+            message: "What is your role?"
         },
         {
             type: "input",
@@ -74,7 +74,7 @@ function addEmployee(){
         {
             type: "input",
             name: "id",
-            message: "What is your id?"
+            message: "What is your role?"
         },
         {
             type: "input",
@@ -92,4 +92,30 @@ function addEmployee(){
         employeeArr.push(newEngineer);
         addEmployee();
     })
+}
+
+function internQuestions(){
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "What is your name?"
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "What is your role?"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is your email?"
+        },
+        {
+            type: "input",
+            name: "school",
+            message: "What is your school name?"
+        }
+    ])
+
 }
