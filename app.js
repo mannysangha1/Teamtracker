@@ -116,6 +116,20 @@ function internQuestions(){
             name: "school",
             message: "What is your school name?"
         }
-    ])
+    ]).then(function(result){
+        const newIntern = new Intern(result.name, result.id, result.email, result.school);
+        console.log(newIntern);
+        employeeArr.push(newIntern);
+        addEmployee();
+    })
 
 }
+
+function generateHTML(){
+    const htmlString = render(employeeArr);
+    fs.writeFile(outputPath, htmlString, (err, data) => {
+        if(err){
+            throw err;
+        }
+    })
+};
