@@ -29,7 +29,7 @@ function managerQuestions(){
         {
             type: "input",
             name: "id",
-            message: "What is your role?"
+            message: "What is your id?"
         },
         {
             type: "input",
@@ -42,7 +42,7 @@ function managerQuestions(){
             message: "What is your office number?"
         }
     ]).then(function(result){
-        const newManager = new Manager(result.name, result.id, result.email, result.officeNumber);
+        const newManager = new Manager(result.name,result.id,result.email,result.officeNumber);
         console.log(newManager);
         employeeArr.push(newManager);
         addEmployee();
@@ -74,7 +74,7 @@ function addEmployee(){
         {
             type: "input",
             name: "id",
-            message: "What is your role?"
+            message: "What is your id?"
         },
         {
             type: "input",
@@ -87,7 +87,7 @@ function addEmployee(){
             message: "What is your github"
         }
     ]).then(function(result){
-        const newEngineer = new Engineer(result.name, result.id, result.email, result.github);
+        const newEngineer = new Engineer(result.name,result.id,result.email,result.github);
         console.log(newEngineer);
         employeeArr.push(newEngineer);
         addEmployee();
@@ -104,7 +104,7 @@ function internQuestions(){
         {
             type: "input",
             name: "id",
-            message: "What is your role?"
+            message: "What is your id?"
         },
         {
             type: "input",
@@ -117,7 +117,7 @@ function internQuestions(){
             message: "What is your school name?"
         }
     ]).then(function(result){
-        const newIntern = new Intern(result.name, result.id, result.email, result.school);
+        const newIntern = new Intern(result.name,result.id,result.email,result.school);
         console.log(newIntern);
         employeeArr.push(newIntern);
         addEmployee();
