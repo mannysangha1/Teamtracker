@@ -64,7 +64,9 @@ function addEmployee(){
             generateHTML();
         }
     })     
-}function engineerQuestions(){
+}
+
+function engineerQuestions(){
     inquirer.prompt([
         {
             type: "input",
@@ -84,7 +86,7 @@ function addEmployee(){
         {
             type: "input",
             name: "github",
-            message: "What is your github"
+            message: "What is your github?"
         }
     ]).then(function(result){
         const newEngineer = new Engineer(result.name,result.id,result.email,result.github);
