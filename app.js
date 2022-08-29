@@ -33,7 +33,7 @@ function managerQuestions(){
         },
         {
             type: "input",
-            input: "email",
+            name: "email",
             message: "What is your email?"
         },
         {
@@ -80,7 +80,7 @@ function engineerQuestions(){
         },
         {
             type: "input",
-            name: "email",
+            name: "name",
             message: "What is your email?"
         },
         {
