@@ -5,10 +5,10 @@ const inquirer = require ("inquirer");
 const path = require ("path");
 const fs = require ("fs");
 
-const HTMLrenderDone_DIR = path.resolve(__dirname, "htmlrenderdone");
-const htmlrenderdonePath = path.join(HTMLrenderDone_DIR, "generatedemployees.html");
+const HTML_DIR = path.resolve(__dirname, "html");
+const htmlPath = path.join(HTML_DIR, "generatedemployees.html");
 
-const render = require("./lib/htmlRenderer");
+const render = require("./lib/htmlRenderer.js");
 
 const employeeArr = []
 
@@ -58,9 +58,9 @@ function addEmployee(){
     }).then(function(result){
         if(result.employeeType === "Engineer"){
             engineerQuestions();
-        } else if (result.employeeType === "Intern"){
+        } else if (result.employeeType==="Intern"){
             internQuestions();
-        } else if (result.employeeType === "Done adding employees"){
+        } else if (result.employeeType==="Done adding employees"){
             generateHTML();
         }
     })     
@@ -80,7 +80,7 @@ function engineerQuestions(){
         },
         {
             type: "input",
-            name: "name",
+            name: "email",
             message: "What is your email?"
         },
         {
@@ -129,7 +129,7 @@ function internQuestions(){
 
 function generateHTML(){
     const htmlString = render(employeeArr);
-    fs.writeFile(outputPath, htmlString, (err, data) => {
+    fs.writeFile(htmlPath, htmlString, (err, data) => {
         if(err){
             throw err;
         }
