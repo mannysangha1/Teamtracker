@@ -15,5 +15,13 @@ h2, h3 {
     width: 30cm;
 } */
 
+.container {
+    background-color: aquamarine;
+    height: 15vh;
+}
 
+.card-employee {
+    width: 18em;
+    text-align: center;
+}
 
